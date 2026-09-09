@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patel Vanita - Business Development Manager</title>
+    <!-- Using Inter font to match standard Next.js premium themes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        background: "hsl(0 0% 100%)",
+                        foreground: "hsl(0 0% 0%)",
+                        card: "hsl(0 0% 98%)",
+                        border: "hsl(0 0% 90%)",
+                        secondary: "hsl(0 0% 95%)",
+                        muted: "hsl(0 0% 96%)",
+                        'muted-foreground': "hsl(0 0% 40%)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: hsl(0 0% 100%);
+            color: hsl(0 0% 0%);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .heading-xl {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+        }
+
+        .heading-lg {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid hsl(0 0% 0%);
+            padding: 1rem 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            background: transparent;
+            color: hsl(0 0% 0%);
+            text-decoration: none;
+        }
+
+        .btn-outline:hover {
+            background: hsl(0 0% 0%);
+            color: hsl(0 0% 100%);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: hsl(0 0% 0%);
+            color: hsl(0 0% 100%);
+            padding: 1rem 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: hsl(0 0% 20%);
+        }
+
+        .card-hover {
+            transition: all 0.4s ease;
+            border: 1px solid hsl(0 0% 90%);
+            background: hsl(0 0% 98%);
+        }
+
+        .card-hover:hover {
+            background: hsl(0 0% 95%);
+            border-color: hsl(0 0% 70%);
+        }
+
+        .link-underline {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: hsl(0 0% 0%);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .link-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-foreground selection:text-background pb-24">
+
+    <!-- Navigation / Header -->
+    <nav class="p-6 md:px-12 flex justify-between items-center border-b border-border reveal active">
+        <div class="text-xl font-bold tracking-tighter">XANOCODE.</div>
+        <div class="text-sm font-medium uppercase tracking-widest text-muted-foreground">Digital Brochure</div>
+    </nav>
+
+    <!-- Hero Profile Section -->
+    <main class="px-6 py-20 md:px-12 lg:px-24 lg:py-32">
+        <div class="max-w-5xl">
+            <p class="text-muted-foreground uppercase tracking-widest text-sm mb-6 reveal active stagger-1 font-semibold">Business Development Manager</p>
+            <h1 class="heading-xl mb-12 reveal active stagger-2 text-foreground">
+                PATEL VANITA.
+            </h1>
+            
+            <div class="flex flex-col sm:flex-row gap-4 reveal active stagger-3">
+                <a href="tel:+919274052582" class="btn-primary">
+                    Call: +91 92740 52582
+                </a>
+                <a href="https://wa.me/919274052582?text=Hello%20Vanita,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-outline">
+                    WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section class="px-6 md:px-12 lg:px-24 py-20 border-t border-border">
+        <div class="mb-16 reveal">
+            <h2 class="heading-lg mb-6">OUR EXPERTISE.</h2>
+            <p class="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                We deliver premium digital solutions tailored to scale your brand, optimize your performance, and dominate your industry.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Category 1 -->
+            <div class="reveal stagger-1 flex flex-col">
+                <h3 class="text-2xl font-bold tracking-tight mb-8 pb-4 border-b border-border flex items-center justify-between">
+                    Digital Marketing
+                    <span class="text-muted-foreground font-normal text-sm">01</span>
+                </h3>
+                <div class="space-y-4 flex-1">
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">WhatsApp Marketing</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Direct customer engagement strategies.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Email Campaigns</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Convert leads into loyal customers.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Meta Ads</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Targeted advertising for better ROI.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">SEO</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Rank higher on search engine results.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="reveal stagger-2 flex flex-col">
+                <h3 class="text-2xl font-bold tracking-tight mb-8 pb-4 border-b border-border flex items-center justify-between">
+                    Web & Optimization
+                    <span class="text-muted-foreground font-normal text-sm">02</span>
+                </h3>
+                <div class="space-y-4 flex-1">
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Web Development</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Modern, responsive websites.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Content Writing</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Compelling content that sells.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹499</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">UI/UX & Conversion</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Improve user experience & sales.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Website Audit</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Comprehensive site analysis.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹1999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">SEO Setup & Fixes</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Technical SEO optimization.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="reveal stagger-3 flex flex-col">
+                <h3 class="text-2xl font-bold tracking-tight mb-8 pb-4 border-b border-border flex items-center justify-between">
+                    Mobile App Services
+                    <span class="text-muted-foreground font-normal text-sm">03</span>
+                </h3>
+                <div class="space-y-4 flex-1">
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">Mobile App Dev</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Custom native & hybrid apps.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">UI/UX for Mobile</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Stunning, high-converting designs.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-hover p-6 flex flex-col">
+                        <h4 class="text-lg font-bold mb-2">App Store SEO</h4>
+                        <p class="text-muted-foreground text-sm mb-4">Rank higher on app stores.</p>
+                        <div class="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                            <span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Starts at</span>
+                            <span class="font-bold text-sm">₹999</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="px-6 md:px-12 lg:px-24 py-20 border-t border-border bg-card/30">
+        <div class="mb-16 reveal">
+            <h2 class="heading-lg mb-6">HOW WE WORK.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+            <div class="reveal stagger-1 flex flex-col items-start card-hover p-6">
+                <span class="text-5xl font-bold text-muted-foreground mb-6 opacity-20">01</span>
+                <h4 class="text-lg font-bold mb-3 uppercase tracking-wider">Discover</h4>
+                <p class="text-muted-foreground text-sm leading-relaxed">Understand your business, audience, goals, and challenges.</p>
+            </div>
+            <div class="reveal stagger-2 flex flex-col items-start card-hover p-6 lg:translate-y-8">
+                <span class="text-5xl font-bold text-muted-foreground mb-6 opacity-20">02</span>
+                <h4 class="text-lg font-bold mb-3 uppercase tracking-wider">Plan</h4>
+                <p class="text-muted-foreground text-sm leading-relaxed">Create a customized digital strategy.</p>
+            </div>
+            <div class="reveal stagger-3 flex flex-col items-start card-hover p-6 lg:translate-y-16">
+                <span class="text-5xl font-bold text-muted-foreground mb-6 opacity-20">03</span>
+                <h4 class="text-lg font-bold mb-3 uppercase tracking-wider">Build</h4>
+                <p class="text-muted-foreground text-sm leading-relaxed">Design and develop your digital solution.</p>
+            </div>
+            <div class="reveal stagger-1 flex flex-col items-start card-hover p-6 lg:translate-y-8">
+                <span class="text-5xl font-bold text-muted-foreground mb-6 opacity-20">04</span>
+                <h4 class="text-lg font-bold mb-3 uppercase tracking-wider">Optimize</h4>
+                <p class="text-muted-foreground text-sm leading-relaxed">Test, improve, and optimize performance.</p>
+            </div>
+            <div class="reveal stagger-2 flex flex-col items-start card-hover p-6">
+                <span class="text-5xl font-bold text-muted-foreground mb-6 opacity-20">05</span>
+                <h4 class="text-lg font-bold mb-3 uppercase tracking-wider">Grow</h4>
+                <p class="text-muted-foreground text-sm leading-relaxed">Use data-driven strategies to help your business grow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="px-6 md:px-12 lg:px-24 py-32 bg-card border-t border-b border-border text-center reveal">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-sm font-bold tracking-widest text-muted-foreground uppercase mb-4">Book Your Free Consultation</h2>
+            <h3 class="heading-lg mb-8">LET'S GROW YOUR BUSINESS.</h3>
+            <p class="text-xl text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed">
+                Your business deserves more than just a digital presence.
+            </p>
+            <p class="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+                Let's build a digital experience that attracts customers, builds trust, and drives growth.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="tel:+919274052582" class="btn-primary shadow-xl hover:-translate-y-1 transition-transform">
+                    Phone: +91 92740 52582
+                </a>
+                <a href="https://wa.me/919274052582?text=Hello%20Vanita,%20I%20would%20like%20to%20book%20a%20free%20consultation." target="_blank" class="btn-outline shadow-xl hover:-translate-y-1 transition-transform bg-background">
+                    WhatsApp: +91 92740 52582
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 md:px-12 lg:px-24 pt-20 pb-10 mt-10 text-center md:text-left reveal">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tighter mb-2">XANOCODE.</h2>
+                <p class="text-muted-foreground text-sm">Innovating the digital future.</p>
+            </div>
+            <div class="flex gap-8">
+                <a href="#" class="link-underline text-sm font-medium uppercase tracking-widest text-muted-foreground hover:text-foreground">Website</a>
+                <a href="#" class="link-underline text-sm font-medium uppercase tracking-widest text-muted-foreground hover:text-foreground">Portfolio</a>
+                <a href="#" class="link-underline text-sm font-medium uppercase tracking-widest text-muted-foreground hover:text-foreground">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger once on load
+        });
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919274052582?text=Hello%20Vanita,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition-all hover:scale-110 z-50 flex items-center justify-center reveal active" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.005-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+</body>
+</html>
